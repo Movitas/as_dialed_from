@@ -5,7 +5,7 @@ A fork of a port of Google's libphonenumber.
 
 ## Examples
 
-as_dialed_from prototypes the String class with an as_dialed_from method.
+as_dialed_from prototypes the String class with an `as_dialed_from` method.
 
 ```rb
 "+12155551212".as_dialed_from "US"
