@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{as_dialed_from}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Campbell"]
@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "as_dialed_from.gemspec",
-    "docs/dependencies.dot",
     "lib/as_dialed_from.rb",
     "lib/as_dialed_from/metadata.rb",
     "lib/as_dialed_from/number.rb",
