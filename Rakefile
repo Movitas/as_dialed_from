@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "phone_number"
-  gem.homepage = "http://github.com/Movitas/phone_number"
+  gem.name = "as_dialed_from"
+  gem.homepage = "http://github.com/Movitas/as_dialed_from"
   gem.license = "Apache"
-  gem.summary = "A Ruby port of Google's libphonenumber"
-  gem.description = "A Ruby port of Google's libphonenumber"
+  gem.summary = "Figure out how a number should be dialed from another country"
+  gem.description = "Figure out how a number should be dialed from another country. A fork of a port of Google's libphonenumber."
   gem.email = "jcampbell@movitas.com"
   gem.authors = ["Justin Campbell"]
   # dependencies defined in Gemfile

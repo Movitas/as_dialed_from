@@ -1,3 +1,3 @@
-# phonenumber
+# as_dialed_from
 
-A Ruby port of Google's libphonenumber
+Figure out how a number should be dialed from another country. A fork of a port of Google's libphonenumber.

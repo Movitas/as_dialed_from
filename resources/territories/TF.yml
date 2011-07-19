@@ -1,5 +1,5 @@
 --- 
-nationalPrefix: "0"
-internationalPrefix: "00"
 countryCode: "262"
+internationalPrefix: "00"
+nationalPrefix: "0"
 content: "\n    "

@@ -2,7 +2,7 @@ require 'net/http'
 require 'xmlsimple'
 require 'yaml'
 
-module PhoneNumber
+module AsDialedFrom
   
   class Metadata
     RESOURCES_DIRECTORY   = File.dirname(__FILE__) + "/../../resources/"
@@ -12,8 +12,12 @@ module PhoneNumber
     
     UPSTREAM_URL = "http://libphonenumber.googlecode.com/svn/trunk/resources/PhoneNumberMetaData.xml"
     
+    attr_accessor :data
+    
+    def initialize; end
+    
     def self.for_region(region_code)
-      YAML::load_file "#{TERRITORIES_DIRECTORY}/#{region_code}.yml" 
+      YAML::load_file "#{TERRITORIES_DIRECTORY}/#{region_code}.yml"
     end
     
     def self.country_code_to_region
@@ -50,19 +54,6 @@ module PhoneNumber
       file = File.new COUNTRY_CODES_FILE, "w"
       file.write country_code_to_region_code_map.to_yaml
       file.close
-    end
-    
-    private
-    
-    def underscore(camel_cased_word)
-      word = camel_cased_word.to_s.dup
-      word.gsub!(/::/, '/')
-      word.gsub!(/(?:([A-Za-z\d])|^)(#{inflections.acronym_regex})(?=\b|[^a-z])/) { "#{$1}#{$1 && '_'}#{$2.downcase}" }
-      word.gsub!(/([A-Z\d]+)([A-Z][a-z])/,'\1_\2')
-      word.gsub!(/([a-z\d])([A-Z])/,'\1_\2')
-      word.tr!("-", "_")
-      word.downcase!
-      word
     end
     
   end

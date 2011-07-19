@@ -1,7 +1,4 @@
 --- 
-internationalPrefix: "00"
-generalDesc: 
-  nationalNumberPattern: "[1-9]\\d{3}"
-  possibleNumberPattern: \d{4}
-  exampleNumber: "3190"
 countryCode: "690"
+internationalPrefix: "00"
+content: "\n    "

@@ -1,11 +1,10 @@
 $:.unshift(File.dirname(__FILE__)) unless
   $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
 
-require 'phone_number/metadata'
-require 'phone_number/number'
-require 'phone_number/number_util'
+require 'as_dialed_from/metadata'
+require 'as_dialed_from/number'
 
-module PhoneNumber
+module AsDialedFrom
   # INTERNATIONAL and NATIONAL formats are consistent with the definition in
   # ITU-T Recommendation E. 123. For example, the number of the Google Zurich
   # office will be written as '+41 44 668 1800' in INTERNATIONAL format, and as
