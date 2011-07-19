@@ -4,5 +4,8 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'as_dialed_from/metadata'
 require 'as_dialed_from/number'
 
-module AsDialedFrom
+class String
+  def as_dialed_from(from_country)
+    AsDialedFrom::Number.new(self).as_dialed_from(from_country)
+  end
 end
