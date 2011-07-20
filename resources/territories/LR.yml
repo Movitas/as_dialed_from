@@ -1,34 +1,5 @@
 --- 
-countryCode: "231"
-internationalPrefix: "00"
-nationalPrefix: "0"
-nationalPrefixFormattingRule: $NP$FG
-availableFormats: 
-  numberFormat: 
-  - pattern: ([279]\d)(\d{3})(\d{3})
-    leadingDigits: "[279]"
-    format: $1 $2 $3
-  - pattern: ([4-6])(\d{3})(\d{3})
-    leadingDigits: "[4-6]"
-    format: $1 $2 $3
-  - pattern: (\d{2})(\d{3})(\d{4})
-    leadingDigits: "[38]"
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "\n          (?:\n            [279]\\d|\n            [4-6]|\n            [38]\\d{2}\n          )\\d{6}\n        "
-  possibleNumberPattern: \d{7,9}
-fixedLine: 
-  nationalNumberPattern: 2\d{7}
-  possibleNumberPattern: \d{8}
-  exampleNumber: "21234567"
-mobile: 
-  nationalNumberPattern: "\n          (?:\n            4[67]|\n            5\\d|\n            6[4-8]|\n            7\\d{2}|\n            880\\d\n          )\\d{5}\n        "
-  exampleNumber: "4612345"
-premiumRate: 
-  nationalNumberPattern: 90\d{6}
-  possibleNumberPattern: \d{8}
-  exampleNumber: "90123456"
-voip: 
-  nationalNumberPattern: 33200\d{4}
-  possibleNumberPattern: \d{9}
-  exampleNumber: "332001234"
+:country_code: "231"
+:international_prefix: "00"
+:national_prefix: "0"
+:national_number_pattern: "\n          (?:\n            [279]\\d|\n            [4-6]|\n            [38]\\d{2}\n          )\\d{6}\n        "

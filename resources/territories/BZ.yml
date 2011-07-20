@@ -1,27 +1,5 @@
 --- 
-countryCode: "501"
-internationalPrefix: "00"
-leadingZeroPossible: "true"
-availableFormats: 
-  numberFormat: 
-  - pattern: (\d{3})(\d{4})
-    leadingDigits: "[2-8]"
-    format: $1-$2
-  - pattern: (0)(800)(\d{4})(\d{3})
-    leadingDigits: "0"
-    format: $1-$2-$3-$4
-generalDesc: 
-  nationalNumberPattern: "\n          [2-8]\\d{6}|\n          0\\d{10}\n        "
-  possibleNumberPattern: \d{7}(?:\d{4})?
-fixedLine: 
-  nationalNumberPattern: "[234578][02]\\d{5}"
-  possibleNumberPattern: \d{7}
-  exampleNumber: "2221234"
-mobile: 
-  nationalNumberPattern: "\n          6(?:\n            [0-2]\\d|\n            [67][01]\n          )\\d{4}\n        "
-  possibleNumberPattern: \d{7}
-  exampleNumber: "6221234"
-tollFree: 
-  nationalNumberPattern: 0800\d{7}
-  possibleNumberPattern: \d{11}
-  exampleNumber: 08001234123
+:country_code: "501"
+:international_prefix: "00"
+:leading_zero_possible: "true"
+:national_number_pattern: "\n          [2-8]\\d{6}|\n          0\\d{10}\n        "

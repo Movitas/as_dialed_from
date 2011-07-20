@@ -1,19 +1,4 @@
 --- 
-countryCode: "216"
-internationalPrefix: "00"
-availableFormats: 
-  numberFormat: 
-    pattern: ([247-9]\d)(\d{3})(\d{3})
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "[247-9]\\d{7}"
-  possibleNumberPattern: \d{8}
-fixedLine: 
-  nationalNumberPattern: 7\d{7}
-  exampleNumber: "71234567"
-mobile: 
-  nationalNumberPattern: "\n          (?:\n            [29]\\d|\n            4[01]\n          )\\d{6}\n        "
-  exampleNumber: "20123456"
-premiumRate: 
-  nationalNumberPattern: 8[028]\d{6}
-  exampleNumber: "80123456"
+:country_code: "216"
+:international_prefix: "00"
+:national_number_pattern: "[247-9]\\d{7}"

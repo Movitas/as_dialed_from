@@ -1,18 +1,5 @@
 --- 
-countryCode: "998"
-internationalPrefix: 8~10
-nationalPrefix: "8"
-nationalPrefixFormattingRule: $NP$FG
-availableFormats: 
-  numberFormat: 
-    pattern: ([679]\d)(\d{3})(\d{2})(\d{2})
-    format: $1 $2 $3 $4
-generalDesc: 
-  nationalNumberPattern: "[679]\\d{8}"
-  possibleNumberPattern: \d{7,9}
-fixedLine: 
-  nationalNumberPattern: "\n          (?:\n            6[125679]|\n            7[0-69]\n          )\\d{7}\n        "
-  exampleNumber: "612345678"
-mobile: 
-  nationalNumberPattern: 9[0-57-9]\d{7}
-  exampleNumber: "912345678"
+:country_code: "998"
+:international_prefix: 8~10
+:national_prefix: "8"
+:national_number_pattern: "[679]\\d{8}"

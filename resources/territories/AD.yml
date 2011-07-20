@@ -1,30 +1,4 @@
 --- 
-countryCode: "376"
-internationalPrefix: "00"
-availableFormats: 
-  numberFormat: 
-  - pattern: (\d{3})(\d{3})
-    leadingDigits: "[346-9]"
-    format: $1 $2
-  - pattern: (180[02])(\d{4})
-    leadingDigits: "1"
-    format: $1 $2
-generalDesc: 
-  nationalNumberPattern: "\n          (?:\n            [346-9]|\n            180\n          )\\d{5}\n        "
-  possibleNumberPattern: \d{6,8}
-fixedLine: 
-  nationalNumberPattern: "[78]\\d{5}"
-  possibleNumberPattern: \d{6}
-  exampleNumber: "712345"
-mobile: 
-  nationalNumberPattern: "[346]\\d{5}"
-  possibleNumberPattern: \d{6}
-  exampleNumber: "312345"
-tollFree: 
-  nationalNumberPattern: 180[02]\d{4}
-  possibleNumberPattern: \d{8}
-  exampleNumber: "18001234"
-premiumRate: 
-  nationalNumberPattern: 9\d{5}
-  possibleNumberPattern: \d{6}
-  exampleNumber: "912345"
+:country_code: "376"
+:international_prefix: "00"
+:national_number_pattern: "\n          (?:\n            [346-9]|\n            180\n          )\\d{5}\n        "

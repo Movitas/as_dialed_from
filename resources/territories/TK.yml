@@ -1,4 +1,3 @@
 --- 
-countryCode: "690"
-internationalPrefix: "00"
-content: "\n    "
+:country_code: "690"
+:international_prefix: "00"

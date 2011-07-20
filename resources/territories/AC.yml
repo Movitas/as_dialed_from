@@ -1,13 +1,4 @@
 --- 
-countryCode: "247"
-internationalPrefix: "00"
-generalDesc: 
-  nationalNumberPattern: "[2-46]\\d{3}"
-  possibleNumberPattern: \d{4}
-fixedLine: 
-  nationalNumberPattern: "\n          (?:\n            3[0-5]|\n            4[4-6]|\n            [26]\\d\n          )\\d{2}\n        "
-  possibleNumberPattern: \d{4}
-  exampleNumber: "6889"
-mobile: 
-  nationalNumberPattern: NA
-  possibleNumberPattern: NA
+:country_code: "247"
+:international_prefix: "00"
+:national_number_pattern: "[2-46]\\d{3}"

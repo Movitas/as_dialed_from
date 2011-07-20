@@ -1,29 +1,5 @@
 --- 
-countryCode: "250"
-internationalPrefix: "000"
-nationalPrefix: "0"
-nationalPrefixFormattingRule: $NP$FG
-availableFormats: 
-  numberFormat: 
-  - nationalPrefixFormattingRule: $FG
-    pattern: (25\d)(\d{3})(\d{3})
-    leadingDigits: "2"
-    format: $1 $2 $3
-  - pattern: ([7-9]\d{2})(\d{3})(\d{3})
-    leadingDigits: "[7-9]"
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "[27-9]\\d{8}"
-  possibleNumberPattern: \d{9}
-fixedLine: 
-  nationalNumberPattern: 25\d{7}
-  exampleNumber: "250123456"
-mobile: 
-  nationalNumberPattern: 7[258]\d{7}
-  exampleNumber: "720123456"
-tollFree: 
-  nationalNumberPattern: 800\d{6}
-  exampleNumber: "800123456"
-premiumRate: 
-  nationalNumberPattern: 900\d{6}
-  exampleNumber: "900123456"
+:country_code: "250"
+:international_prefix: "000"
+:national_prefix: "0"
+:national_number_pattern: "[27-9]\\d{8}"

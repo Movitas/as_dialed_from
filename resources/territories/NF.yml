@@ -1,20 +1,4 @@
 --- 
-countryCode: "672"
-internationalPrefix: "00"
-availableFormats: 
-  numberFormat: 
-  - pattern: (\d{2})(\d{4})
-    leadingDigits: "1"
-    format: $1 $2
-  - pattern: (\d)(\d{5})
-    leadingDigits: "3"
-    format: $1 $2
-generalDesc: 
-  nationalNumberPattern: "[13]\\d{5}"
-  possibleNumberPattern: \d{5,6}
-fixedLine: 
-  nationalNumberPattern: "\n          (?:\n            1(?:\n              06|\n              17|\n              28|\n              39\n            )|\n            3[012]\\d\n          )\\d{3}\n        "
-  exampleNumber: "106609"
-mobile: 
-  nationalNumberPattern: 38\d{4}
-  exampleNumber: "381234"
+:country_code: "672"
+:international_prefix: "00"
+:national_number_pattern: "[13]\\d{5}"

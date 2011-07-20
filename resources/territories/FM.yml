@@ -1,16 +1,4 @@
 --- 
-countryCode: "691"
-internationalPrefix: "00"
-availableFormats: 
-  numberFormat: 
-    pattern: (\d{3})(\d{4})
-    format: $1 $2
-generalDesc: 
-  nationalNumberPattern: "[39]\\d{6}"
-  possibleNumberPattern: \d{7}
-fixedLine: 
-  nationalNumberPattern: "\n            3[2357]0[1-9]\\d{3}|\n            9[2-6]\\d{5}\n        "
-  exampleNumber: "3201234"
-mobile: 
-  nationalNumberPattern: "\n          3[2357]0[1-9]\\d{3}|\n          9[2-7]\\d{5}\n        "
-  exampleNumber: "3501234"
+:country_code: "691"
+:international_prefix: "00"
+:national_number_pattern: "[39]\\d{6}"

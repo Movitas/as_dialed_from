@@ -1,18 +1,5 @@
 --- 
-countryCode: "232"
-internationalPrefix: "00"
-nationalPrefix: "0"
-nationalPrefixFormattingRule: ($NP$FG)
-availableFormats: 
-  numberFormat: 
-    pattern: (\d{2})(\d{6})
-    format: $1 $2
-generalDesc: 
-  nationalNumberPattern: "[2-578]\\d{7}"
-  possibleNumberPattern: \d{6,8}
-fixedLine: 
-  nationalNumberPattern: "[235]2[2-4][2-9]\\d{4}"
-  exampleNumber: "22221234"
-mobile: 
-  nationalNumberPattern: "\n          (?:\n            25|\n            3[03]|\n            44|\n            5[056]|\n            7[6-8]|\n            88\n          )[1-9]\\d{5}\n        "
-  exampleNumber: "25123456"
+:country_code: "232"
+:international_prefix: "00"
+:national_prefix: "0"
+:national_number_pattern: "[2-578]\\d{7}"

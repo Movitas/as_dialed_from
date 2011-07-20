@@ -1,43 +1,5 @@
 --- 
-countryCode: "66"
-internationalPrefix: "00"
-nationalPrefix: "0"
-nationalPrefixFormattingRule: $NP$FG
-availableFormats: 
-  numberFormat: 
-  - pattern: (2)(\d{3})(\d{4})
-    leadingDigits: "2"
-    format: $1 $2 $3
-  - pattern: ([3-7]\d)(\d{3})(\d{3,4})
-    leadingDigits: "[3-7]"
-    format: $1 $2 $3
-  - pattern: (8)(\d{4})(\d{4})
-    leadingDigits: "8"
-    format: $1 $2 $3
-  - nationalPrefixFormattingRule: $FG
-    pattern: (1[89]00)(\d{3})(\d{3})
-    leadingDigits: "1"
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "\n          [2-8]\\d{7,8}|\n          1\\d{9}\n        "
-  possibleNumberPattern: \d{8,10}
-fixedLine: 
-  nationalNumberPattern: "\n          (?:\n            2[1-9]|\n            3[24-9]|\n            4[2-5]|\n            5[3-6]|\n            7[3-7]\n          )\\d{6}\n        "
-  possibleNumberPattern: \d{8}
-  exampleNumber: "21234567"
-mobile: 
-  nationalNumberPattern: 8\d{8}
-  possibleNumberPattern: \d{9}
-  exampleNumber: "812345678"
-tollFree: 
-  nationalNumberPattern: 1800\d{6}
-  possibleNumberPattern: \d{10}
-  exampleNumber: "1800123456"
-premiumRate: 
-  nationalNumberPattern: 1900\d{6}
-  possibleNumberPattern: \d{10}
-  exampleNumber: "1900123456"
-voip: 
-  nationalNumberPattern: 60\d{7}
-  possibleNumberPattern: \d{9}
-  exampleNumber: "601234567"
+:country_code: "66"
+:international_prefix: "00"
+:national_prefix: "0"
+:national_number_pattern: "\n          [2-8]\\d{7,8}|\n          1\\d{9}\n        "

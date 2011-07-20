@@ -1,27 +1,5 @@
 --- 
-countryCode: "1"
-leadingDigits: "684"
-nationalPrefix: "1"
-internationalPrefix: "011"
-generalDesc: 
-  nationalNumberPattern: "[5689]\\d{9}"
-  possibleNumberPattern: \d{7}(?:\d{3})?
-fixedLine: 
-  nationalNumberPattern: "\n          6846(?:\n            22|\n            33|\n            44|\n            55|\n            77|\n            88|\n            9[19]\n          )\\d{4}\n        "
-  exampleNumber: "6846221234"
-mobile: 
-  nationalNumberPattern: "\n          684(?:\n            733|\n            258\n          )\\d{4}\n        "
-  possibleNumberPattern: \d{10}
-  exampleNumber: "6847331234"
-tollFree: 
-  nationalNumberPattern: "\n          8(?:\n            00|\n            55|\n            66|\n            77|\n            88\n          )[2-9]\\d{6}\n        "
-  possibleNumberPattern: \d{10}
-  exampleNumber: "8002123456"
-premiumRate: 
-  nationalNumberPattern: 900[2-9]\d{6}
-  possibleNumberPattern: \d{10}
-  exampleNumber: "9002123456"
-personalNumber: 
-  nationalNumberPattern: "\n          5(?:\n            00|\n            33|\n            44\n          )[2-9]\\d{6}\n        "
-  possibleNumberPattern: \d{10}
-  exampleNumber: "5002345678"
+:country_code: "1"
+:international_prefix: "011"
+:national_prefix: "1"
+:national_number_pattern: "[5689]\\d{9}"

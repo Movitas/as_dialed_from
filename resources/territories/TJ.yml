@@ -1,35 +1,5 @@
 --- 
-countryCode: "992"
-internationalPrefix: 8~10
-nationalPrefix: "8"
-nationalPrefixFormattingRule: ($NP) $FG
-availableFormats: 
-  numberFormat: 
-  - pattern: ([349]\d{2})(\d{2})(\d{4})
-    leadingDigits: "\n            [34]7|\n            91[78]\n          "
-    format: $1 $2 $3
-  - pattern: ([459]\d)(\d{3})(\d{4})
-    leadingDigits: "\n            4[48]|\n            5|\n            9(?:\n              19|\n              [0235-9]\n            )\n          "
-    format: $1 $2 $3
-  - pattern: (331700)(\d)(\d{2})
-    leadingDigits: 
-    - "331"
-    - "3317"
-    - "33170"
-    - "331700"
-    format: $1 $2 $3
-  - pattern: (\d{4})(\d)(\d{4})
-    leadingDigits: 
-    - 3[1-5]
-    - "\n            3(?:\n              [1245]|\n              3(?:\n                [02-9]|\n                1[0-589]\n              )\n            )\n          "
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "[3-59]\\d{8}"
-  possibleNumberPattern: \d{3,9}
-fixedLine: 
-  nationalNumberPattern: "\n          (?:\n            3(?:\n              1[3-5]|\n              2[245]|\n              3[12]|\n              4[24-7]|\n              5[25]|\n              72\n            )|\n            4(?:\n              46|\n              74|\n              87\n            )\n          )\\d{6}\n        "
-  exampleNumber: "372123456"
-mobile: 
-  nationalNumberPattern: "\n          (?:\n            505|\n            9[0-35-9]\\d\n          )\\d{6}\n        "
-  possibleNumberPattern: \d{9}
-  exampleNumber: "917123456"
+:country_code: "992"
+:international_prefix: 8~10
+:national_prefix: "8"
+:national_number_pattern: "[3-59]\\d{8}"

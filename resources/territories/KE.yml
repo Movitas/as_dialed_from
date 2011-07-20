@@ -1,32 +1,5 @@
 --- 
-countryCode: "254"
-internationalPrefix: "000"
-nationalPrefix: "0"
-nationalPrefixFormattingRule: $NP$FG
-availableFormats: 
-  numberFormat: 
-  - pattern: (\d{2})(\d{4,7})
-    leadingDigits: "\n            [2-6]|\n            91\n          "
-    format: $1 $2
-  - pattern: (\d{3})(\d{6,7})
-    leadingDigits: "\n            [78]|\n            90\n          "
-    format: $1 $2
-generalDesc: 
-  nationalNumberPattern: \d{6,10}
-  possibleNumberPattern: \d{4,10}
-fixedLine: 
-  nationalNumberPattern: "\n          (?:\n            20|\n            4[0-6]|\n            5\\d|\n            6[0-24-9]\n          )\\d{4,7}\n        "
-  possibleNumberPattern: \d{4,9}
-  exampleNumber: "202012345"
-mobile: 
-  nationalNumberPattern: "\n          7(?:\n            0[0-3]|\n            [123]\\d|\n            5[0-3]|\n            7[0-4]\n          )\\d{6}\n        "
-  possibleNumberPattern: \d{9}
-  exampleNumber: "712123456"
-tollFree: 
-  nationalNumberPattern: "\n          8(?:\n            00|\n            88\n          )\\d{6,7}\n        "
-  possibleNumberPattern: \d{9,10}
-  exampleNumber: "800123456"
-premiumRate: 
-  nationalNumberPattern: "\n           9(?:\n             00|\n             1\n           )\\d{6,7}\n         "
-  possibleNumberPattern: \d{8,10}
-  exampleNumber: "900123456"
+:country_code: "254"
+:international_prefix: "000"
+:national_prefix: "0"
+:national_number_pattern: \d{6,10}

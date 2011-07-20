@@ -1,5 +1,4 @@
 --- 
-countryCode: "262"
-internationalPrefix: "00"
-nationalPrefix: "0"
-content: "\n    "
+:country_code: "262"
+:international_prefix: "00"
+:national_prefix: "0"

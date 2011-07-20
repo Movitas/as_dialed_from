@@ -1,16 +1,4 @@
 --- 
-countryCode: "853"
-internationalPrefix: "00"
-availableFormats: 
-  numberFormat: 
-    pattern: ([268]\d{3})(\d{4})
-    format: $1 $2
-generalDesc: 
-  nationalNumberPattern: "[268]\\d{7}"
-  possibleNumberPattern: \d{8}
-fixedLine: 
-  nationalNumberPattern: "\n          (?:\n            28[2-57-9]|\n            8[2-57-9]\\d\n          )\\d{5}\n        "
-  exampleNumber: "28212345"
-mobile: 
-  nationalNumberPattern: 6[26]\d{6}
-  exampleNumber: "66123456"
+:country_code: "853"
+:international_prefix: "00"
+:national_number_pattern: "[268]\\d{7}"

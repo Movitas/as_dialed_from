@@ -1,33 +1,4 @@
 --- 
-countryCode: "503"
-internationalPrefix: "00"
-availableFormats: 
-  numberFormat: 
-  - pattern: (\d{4})(\d{4})
-    leadingDigits: "[27]"
-    format: $1 $2
-  - pattern: (\d{3})(\d{4})
-    leadingDigits: "[89]"
-    format: $1 $2
-  - pattern: (\d{3})(\d{4})(\d{4})
-    leadingDigits: "[89]"
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "\n          [27]\\d{7}|\n          [89]\\d{6}(?:\\d{4})?\n        "
-  possibleNumberPattern: "\n          \\d{7,8}|\n          \\d{11}\n        "
-fixedLine: 
-  nationalNumberPattern: 2[1-6]\d{6}
-  possibleNumberPattern: \d{8}
-  exampleNumber: "21234567"
-mobile: 
-  nationalNumberPattern: 7\d{7}
-  possibleNumberPattern: \d{8}
-  exampleNumber: "70123456"
-tollFree: 
-  nationalNumberPattern: 800\d{4}(?:\d{4})?
-  possibleNumberPattern: \d{7}(?:\d{4})?
-  exampleNumber: "8001234"
-premiumRate: 
-  nationalNumberPattern: 900\d{4}(?:\d{4})?
-  possibleNumberPattern: \d{7}(?:\d{4})?
-  exampleNumber: "9001234"
+:country_code: "503"
+:international_prefix: "00"
+:national_number_pattern: "\n          [27]\\d{7}|\n          [89]\\d{6}(?:\\d{4})?\n        "

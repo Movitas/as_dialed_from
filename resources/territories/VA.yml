@@ -1,17 +1,5 @@
 --- 
-countryCode: "379"
-internationalPrefix: "00"
-leadingZeroPossible: "true"
-availableFormats: 
-  numberFormat: 
-    pattern: (06)(\d{4})(\d{4})
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: 06\d{8}
-  possibleNumberPattern: \d{10}
-fixedLine: 
-  nationalNumberPattern: 06698\d{5}
-  exampleNumber: 0669812345
-mobile: 
-  nationalNumberPattern: N/A
-  possibleNumberPattern: N/A
+:country_code: "379"
+:international_prefix: "00"
+:leading_zero_possible: "true"
+:national_number_pattern: 06\d{8}

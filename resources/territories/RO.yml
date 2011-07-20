@@ -1,36 +1,5 @@
 --- 
-countryCode: "40"
-internationalPrefix: "00"
-nationalPrefix: "0"
-nationalPrefixFormattingRule: $NP$FG
-preferredExtnPrefix: " int "
-availableFormats: 
-  numberFormat: 
-  - pattern: ([237]\d)(\d{3})(\d{4})
-    leadingDigits: "\n            [23]1|\n            7\n          "
-    format: $1 $2 $3
-  - pattern: (\d{3})(\d{3})(\d{3})
-    leadingDigits: "\n            [23][02-9]|\n            [89]\n          "
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "[237-9]\\d{8}"
-  possibleNumberPattern: \d{9}
-fixedLine: 
-  nationalNumberPattern: "[23][13-6]\\d{7}"
-  exampleNumber: "211234567"
-mobile: 
-  nationalNumberPattern: 7[1-8]\d{7}
-  exampleNumber: "712345678"
-tollFree: 
-  nationalNumberPattern: 800\d{6}
-  possibleNumberPattern: \d{9}
-  exampleNumber: "800123456"
-premiumRate: 
-  nationalNumberPattern: 90[036]\d{6}
-  exampleNumber: "900123456"
-sharedCost: 
-  nationalNumberPattern: 801\d{6}
-  exampleNumber: "801123456"
-personalNumber: 
-  nationalNumberPattern: 802\d{6}
-  exampleNumber: "802123456"
+:country_code: "40"
+:international_prefix: "00"
+:national_prefix: "0"
+:national_number_pattern: "[237-9]\\d{8}"

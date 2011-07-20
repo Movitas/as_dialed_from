@@ -1,18 +1,5 @@
 --- 
-countryCode: "262"
-internationalPrefix: "00"
-nationalPrefix: "0"
-nationalPrefixFormattingRule: $NP$FG
-leadingDigits: 269|63
-generalDesc: 
-  nationalNumberPattern: "[268]\\d{8}"
-  possibleNumberPattern: \d{9}
-fixedLine: 
-  nationalNumberPattern: 2696[0-4]\d{4}
-  exampleNumber: "269601234"
-mobile: 
-  nationalNumberPattern: 639\d{6}
-  exampleNumber: "639123456"
-tollFree: 
-  nationalNumberPattern: 80\d{7}
-  exampleNumber: "801234567"
+:country_code: "262"
+:international_prefix: "00"
+:national_prefix: "0"
+:national_number_pattern: "[268]\\d{8}"

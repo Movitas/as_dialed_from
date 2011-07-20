@@ -1,12 +1,4 @@
 --- 
-countryCode: "683"
-internationalPrefix: "00"
-generalDesc: 
-  nationalNumberPattern: "[1-5]\\d{3}"
-  possibleNumberPattern: \d{4}
-fixedLine: 
-  nationalNumberPattern: "[34]\\d{3}"
-  exampleNumber: "4002"
-mobile: 
-  nationalNumberPattern: "[125]\\d{3}"
-  exampleNumber: "1234"
+:country_code: "683"
+:international_prefix: "00"
+:national_number_pattern: "[1-5]\\d{3}"

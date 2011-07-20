@@ -1,36 +1,5 @@
 --- 
-countryCode: "33"
-internationalPrefix: "[04579]0"
-preferredInternationalPrefix: "00"
-nationalPrefix: "0"
-nationalPrefixFormattingRule: $NP$FG
-availableFormats: 
-  numberFormat: 
-  - pattern: ([1-79])(\d{2})(\d{2})(\d{2})(\d{2})
-    leadingDigits: "[1-79]"
-    format: $1 $2 $3 $4 $5
-  - nationalPrefixFormattingRule: $NP $FG
-    pattern: (8\d{2})(\d{2})(\d{2})(\d{2})
-    leadingDigits: "8"
-    format: $1 $2 $3 $4
-generalDesc: 
-  nationalNumberPattern: "[1-9]\\d{8}"
-  possibleNumberPattern: \d{9}
-fixedLine: 
-  nationalNumberPattern: "[1-5]\\d{8}"
-  exampleNumber: "123456789"
-mobile: 
-  nationalNumberPattern: "\n          6\\d{8}|\n          7[5-9]\\d{7}\n        "
-  exampleNumber: "612345678"
-tollFree: 
-  nationalNumberPattern: 80\d{7}
-  exampleNumber: "801234567"
-premiumRate: 
-  nationalNumberPattern: 89[1-37-9]\d{6}
-  exampleNumber: "891123456"
-sharedCost: 
-  nationalNumberPattern: "\n          8(?:\n            1[019]|\n            2[0156]|\n            84|\n            90\n          )\\d{6}\n        "
-  exampleNumber: "810123456"
-voip: 
-  nationalNumberPattern: 9\d{8}
-  exampleNumber: "912345678"
+:country_code: "33"
+:international_prefix: "[04579]0"
+:national_prefix: "0"
+:national_number_pattern: "[1-9]\\d{8}"

@@ -1,24 +1,5 @@
 --- 
-countryCode: "242"
-internationalPrefix: "00"
-leadingZeroPossible: "true"
-availableFormats: 
-  numberFormat: 
-  - pattern: (\d{2})(\d{3})(\d{4})
-    leadingDigits: "[02]"
-    format: $1 $2 $3
-  - pattern: (\d)(\d{4})(\d{4})
-    leadingDigits: "8"
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "[028]\\d{8}"
-  possibleNumberPattern: \d{9}
-fixedLine: 
-  nationalNumberPattern: 222[1-589]\d{5}
-  exampleNumber: "222123456"
-mobile: 
-  nationalNumberPattern: 0[14-6]\d{7}
-  exampleNumber: "061234567"
-tollFree: 
-  nationalNumberPattern: 800\d{6}
-  exampleNumber: "800123456"
+:country_code: "242"
+:international_prefix: "00"
+:leading_zero_possible: "true"
+:national_number_pattern: "[028]\\d{8}"

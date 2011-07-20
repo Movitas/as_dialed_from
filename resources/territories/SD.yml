@@ -1,18 +1,5 @@
 --- 
-countryCode: "249"
-internationalPrefix: "00"
-nationalPrefix: "0"
-nationalPrefixFormattingRule: $NP$FG
-availableFormats: 
-  numberFormat: 
-    pattern: (\d{2})(\d{3})(\d{4})
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "[19]\\d{8}"
-  possibleNumberPattern: \d{9}
-fixedLine: 
-  nationalNumberPattern: "\n          1(?:\n            [25]\\d|\n            8[3567]\n          )\\d{6}\n        "
-  exampleNumber: "121231234"
-mobile: 
-  nationalNumberPattern: 9[1259]\d{7}
-  exampleNumber: "911231234"
+:country_code: "249"
+:international_prefix: "00"
+:national_prefix: "0"
+:national_number_pattern: "[19]\\d{8}"

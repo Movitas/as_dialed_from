@@ -1,22 +1,4 @@
 --- 
-countryCode: "299"
-internationalPrefix: "00"
-availableFormats: 
-  numberFormat: 
-    pattern: (\d{2})(\d{2})(\d{2})
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "[1-689]\\d{5}"
-  possibleNumberPattern: \d{6}
-fixedLine: 
-  nationalNumberPattern: "\n          (?:\n            19|\n            3[1-6]|\n            6[14689]|\n            8[14-79]|\n            9\\d\n          )\\d{4}\n        "
-  exampleNumber: "321000"
-mobile: 
-  nationalNumberPattern: "[245][2-9]\\d{4}"
-  exampleNumber: "221234"
-tollFree: 
-  nationalNumberPattern: 80\d{4}
-  exampleNumber: "801234"
-voip: 
-  nationalNumberPattern: 3[89]\d{4}
-  exampleNumber: "381234"
+:country_code: "299"
+:international_prefix: "00"
+:national_number_pattern: "[1-689]\\d{5}"

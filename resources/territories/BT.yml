@@ -1,22 +1,4 @@
 --- 
-countryCode: "975"
-internationalPrefix: "00"
-availableFormats: 
-  numberFormat: 
-  - pattern: (17)(\d{2})(\d{2})(\d{2})
-    leadingDigits: "1"
-    format: $1 $2 $3 $4
-  - pattern: ([2-8])(\d{3})(\d{3})
-    leadingDigits: "[2-8]"
-    format: $1 $2 $3
-generalDesc: 
-  nationalNumberPattern: "\n          (?:\n            17|\n            [2-8]\n          )\\d{6}\n        "
-  possibleNumberPattern: \d{6,8}
-fixedLine: 
-  nationalNumberPattern: "\n          (?:\n            2[3-6]|\n            [34][5-7]|\n            5[236]|\n            6[2-46]|\n            7[246]|\n            8[2-4]\n          )\\d{5}\n        "
-  possibleNumberPattern: \d{6,7}
-  exampleNumber: "2345678"
-mobile: 
-  nationalNumberPattern: 17\d{6}
-  possibleNumberPattern: \d{8}
-  exampleNumber: "17123456"
+:country_code: "975"
+:international_prefix: "00"
+:national_number_pattern: "\n          (?:\n            17|\n            [2-8]\n          )\\d{6}\n        "

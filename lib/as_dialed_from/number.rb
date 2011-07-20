@@ -25,10 +25,10 @@ module AsDialedFrom
       
       if from_country == Metadata.country_code_to_region[country_code][0]
         # If we're calling within the same country, just prepend the national number with the national prefix
-        "#{leading_zero}#{metadata['nationalPrefix']}#{national_number}"
+        "#{leading_zero}#{metadata[:national_prefix]}#{national_number}"
       else
         # If we're calling out of country, we need to dial the exit code and the destination country code before the number
-        "#{exit_code(from_metadata['internationalPrefix'])}#{country_code}#{leading_zero}#{national_number}"
+        "#{exit_code(from_metadata[:international_prefix])}#{country_code}#{leading_zero}#{national_number}"
       end
     end
     
@@ -66,12 +66,12 @@ module AsDialedFrom
     
     def determine_national_number
       n = @number.gsub "+#{country_code}", ""
-      n.match metadata['generalDesc']['nationalNumberFormat'] if metadata['generalDesc']['nationalNumberFormat']
+      n.match metadata[:national_number_format] if metadata[:national_number_format]
       n
     end
     
     def leading_zero
-      "0" if metadata['leadingZeroPossible']
+      "0" if metadata[:leading_zero_possible]
     end
     
   end

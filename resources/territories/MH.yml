@@ -1,5 +1,4 @@
 --- 
-countryCode: "692"
-internationalPrefix: "011"
-nationalPrefix: "1"
-content: "\n    "
+:country_code: "692"
+:international_prefix: "011"
+:national_prefix: "1"
