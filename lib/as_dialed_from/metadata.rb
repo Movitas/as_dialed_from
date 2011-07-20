@@ -1,5 +1,4 @@
 require 'net/http'
-require 'xmlsimple'
 require 'yaml'
 
 module AsDialedFrom
@@ -31,6 +30,8 @@ module AsDialedFrom
     end
     
     def self.parse
+      require 'xmlsimple'
+      
       puts "Parsing XML file"
       
       xml = File.read LOCAL_XML_FILE
