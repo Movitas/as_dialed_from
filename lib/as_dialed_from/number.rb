@@ -17,6 +17,8 @@ module AsDialedFrom
     end
     
     def as_dialed_from(from_country)
+      from_country = determine_country_code(from_country) if from_country.size > 3
+      
       # Convert numeric country code to region id
       from_country = Metadata.country_code_to_region[from_country.to_s][0] if from_country.is_a? Integer or from_country.to_i.nonzero?
       
@@ -33,16 +35,18 @@ module AsDialedFrom
     end
     
     def country_code
-      @country_code ||= determine_country_code
+      @country_code ||= determine_country_code(@number)
     end
     
-    def determine_country_code
-      raise "+<country_code> is required at the beginning of the number" unless @number[0,1] == "+"
+    def determine_country_code(number)
+      number = number.to_s
+      
+      number.delete! "+"
       
       # Test the leading digits to find a valid country_code
       # Country codes are not ambiguous (ex. 1 is valid, and there is no 1X or 1XX)
       (1..3).each do |length|
-        possible_country_code = @number[1,length]
+        possible_country_code = number[0,length]
         
         return possible_country_code if Metadata.country_code_to_region[possible_country_code]
       end
@@ -65,9 +69,7 @@ module AsDialedFrom
     end
     
     def determine_national_number
-      n = @number.gsub "+#{country_code}", ""
-      n.match metadata[:national_number_format] if metadata[:national_number_format]
-      n
+      @number.gsub /^(\+)?(#{country_code})/, ""
     end
     
     def leading_zero

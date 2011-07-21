@@ -37,10 +37,6 @@ class Number < Test::Unit::TestCase
     assert AsDialedFrom::Number.new US_NUMBER
   end
   
-  test "should raise an error when no + is passed" do
-    assert_raise(RuntimeError) { AsDialedFrom::Number.new "12155551212" }
-  end
-  
   test "should determine country code from string" do
     assert_equal "1",  AsDialedFrom::Number.new(US_NUMBER ).country_code
     assert_equal "52", AsDialedFrom::Number.new(MX_NUMBER1).country_code
@@ -83,4 +79,9 @@ class Number < Test::Unit::TestCase
     assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(1)
   end
   
+  test "as_dialed_from should accept a caller id number as input" do
+    assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(US_NUMBER)
+    assert_equal "0016502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(MX_NUMBER1)
+  end
+
 end
