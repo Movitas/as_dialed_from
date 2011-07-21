@@ -8,6 +8,8 @@ A fork of a port of Google's libphonenumber.
 as_dialed_from prototypes the String class with an `as_dialed_from` method.
 
 ```rb
+require 'as_dialed_from'
+
 "+12155551212".as_dialed_from "US"
  => "12155551212"
 
