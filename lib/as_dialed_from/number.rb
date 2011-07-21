@@ -37,7 +37,7 @@ module AsDialedFrom
     end
     
     def determine_country_code
-      raise "+<country_code> is required at the beginning of the number" unless @number[0] == "+"
+      raise "+<country_code> is required at the beginning of the number" unless @number[0,1] == "+"
       
       # Test the leading digits to find a valid country_code
       # Country codes are not ambiguous (ex. 1 is valid, and there is no 1X or 1XX)
