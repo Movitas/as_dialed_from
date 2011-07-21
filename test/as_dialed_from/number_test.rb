@@ -75,4 +75,12 @@ class Number < Test::Unit::TestCase
     assert_equal "0115491187654321", AsDialedFrom::Number.new(AR_MOBILE).as_dialed_from("US")
   end
   
+  test "as_dialed_from should accept a country code string as input" do
+    assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("1")
+  end
+  
+  test "as_dialed_from should accept a country code integer as input" do
+    assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(1)
+  end
+  
 end

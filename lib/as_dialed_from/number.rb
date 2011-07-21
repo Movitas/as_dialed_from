@@ -18,7 +18,7 @@ module AsDialedFrom
     
     def as_dialed_from(from_country)
       # Convert numeric country code to region id
-      from_country = Metadata.country_code_to_region[from_country][0] if from_country.is_a? Integer or from_country.to_i.nonzero?
+      from_country = Metadata.country_code_to_region[from_country.to_s][0] if from_country.is_a? Integer or from_country.to_i.nonzero?
       
       from_metadata = Metadata.for_region(from_country)
       raise "Could not find valid metadata for from_country" unless from_metadata
