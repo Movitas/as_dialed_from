@@ -3,6 +3,10 @@
 Figure out how a number should be dialed from another country.
 A fork of a port of Google's libphonenumber.
 
+## Warning
+
+Not all country combinations work correctly. Contributions welcome.
+
 ## Examples
 
 as_dialed_from prototypes the String class with an `as_dialed_from` method.
