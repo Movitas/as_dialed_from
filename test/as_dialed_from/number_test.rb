@@ -52,8 +52,15 @@ class Number < Test::Unit::TestCase
   end
   
   test "should return a number to dial using as_dialed_from" do
+    # Intra-country calls
     assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("US")
+    assert_equal "013312345678", AsDialedFrom::Number.new(MX_NUMBER1).as_dialed_from("MX")
     
+    # MX cell numbers
+    assert_equal "0112345678900", AsDialedFrom::Number.new(MX_MOBILE1).as_dialed_from("MX")
+    assert_equal "0115212345678900", AsDialedFrom::Number.new(MX_MOBILE1).as_dialed_from("US")
+    
+    # US <-> MX
     assert_equal "0016502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("MX")
     assert_equal "011523312345678", AsDialedFrom::Number.new(MX_NUMBER1).as_dialed_from("US")
     
