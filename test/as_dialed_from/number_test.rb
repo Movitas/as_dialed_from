@@ -66,7 +66,8 @@ class Number < Test::Unit::TestCase
     
     assert_equal "0019002530000", AsDialedFrom::Number.new(US_PREMIUM).as_dialed_from("DE")
     # assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("BS")
-    # assert_equal "0~016502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("PL")
+    assert_equal "0016502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("PL")
+    assert_equal "8~1016502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("RU")
     assert_equal "011447912345678", AsDialedFrom::Number.new(GB_MOBILE).as_dialed_from("US")
     assert_equal "00491234", AsDialedFrom::Number.new(DE_SHORT_NUMBER).as_dialed_from("GB")
     
