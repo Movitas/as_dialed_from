@@ -48,7 +48,7 @@ class Number < Test::Unit::TestCase
   end
   
   test "should return national number" do
-    assert_equal "6502530000", AsDialedFrom::Number.new(US_NUMBER).national_number
+    assert_equal "6502530000", AsDialedFrom::Number.new(US_NUMBER).send(:national_number)
   end
   
   test "should return a number to dial using as_dialed_from" do

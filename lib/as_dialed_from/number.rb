@@ -17,7 +17,7 @@ module AsDialedFrom
     end
     
     def as_dialed_from(from_country)
-      from_country = determine_country_code(from_country) if from_country.size > 3
+      from_country = self.class.determine_country_code(from_country) if from_country.size > 3
       
       # Convert numeric country code to region id
       from_country = Metadata.country_code_to_region[from_country.to_s][0] if from_country.is_a? Integer or from_country.to_i.nonzero?
@@ -30,12 +30,12 @@ module AsDialedFrom
         "#{leading_zero}#{metadata[:national_prefix]}#{national_number}"
       else
         # If we're calling out of country, we need to dial the exit code and the destination country code before the number
-        "#{exit_code(from_metadata[:international_prefix])}#{country_code}#{leading_zero}#{national_number}"
+        "#{self.class.exit_code(from_metadata[:international_prefix])}#{country_code}#{leading_zero}#{national_number}"
       end
     end
     
     def country_code
-      @country_code ||= determine_country_code(@number)
+      @country_code ||= self.class.determine_country_code(@number)
     end
     
     def national_number
@@ -48,7 +48,7 @@ module AsDialedFrom
     
     private
     
-    def determine_country_code(number)
+    def self.determine_country_code(number)
       number = number.to_s
       
       number.delete! "+"
@@ -64,7 +64,7 @@ module AsDialedFrom
       raise "No valid country code was present"
     end
     
-    def exit_code(international_prefix)
+    def self.exit_code(international_prefix)
       international_prefix.delete("[]").match international_prefix
     end
     
