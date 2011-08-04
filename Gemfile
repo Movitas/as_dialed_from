@@ -6,8 +6,7 @@ group :development, :test do
   gem 'test-unit'
   gem 'guard-test'
   
-  require 'rbconfig'
-  if RbConfig::CONFIG['host_os'] =~ /darwin/i
+  group :darwin do
     gem 'rb-fsevent'
     gem 'growl'
   end
