@@ -39,7 +39,7 @@ module AsDialedFrom
     end
     
     def national_number
-      @national_number ||= determine_national_number
+      @number.gsub /^(\+)?(#{country_code})/, ""
     end
     
     def leading_zero
@@ -72,10 +72,6 @@ module AsDialedFrom
       @metadata ||= Metadata.for_region(Metadata.country_code_to_region[country_code][0])
       raise "Could not find valid metadata for number" unless @metadata
       @metadata
-    end
-    
-    def determine_national_number
-      @number.gsub /^(\+)?(#{country_code})/, ""
     end
     
   end
