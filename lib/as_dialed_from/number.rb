@@ -38,6 +38,16 @@ module AsDialedFrom
       @country_code ||= determine_country_code(@number)
     end
     
+    def national_number
+      @national_number ||= determine_national_number
+    end
+    
+    def leading_zero
+      "0" if metadata[:leading_zero_possible]
+    end
+    
+    private
+    
     def determine_country_code(number)
       number = number.to_s
       
@@ -64,16 +74,8 @@ module AsDialedFrom
       @metadata
     end
     
-    def national_number
-      @national_number ||= determine_national_number
-    end
-    
     def determine_national_number
       @number.gsub /^(\+)?(#{country_code})/, ""
-    end
-    
-    def leading_zero
-      "0" if metadata[:leading_zero_possible]
     end
     
   end
