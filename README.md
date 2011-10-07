@@ -1,4 +1,4 @@
-# as_dialed_from
+# as_dialed_from [![Build Status](https://secure.travis-ci.org/Movitas/as_dialed_from.png)](https://secure.travis-ci.org/Movitas/as_dialed_from)
 
 Figure out how a number should be dialed from another country.
 A fork of a port of Google's libphonenumber.
