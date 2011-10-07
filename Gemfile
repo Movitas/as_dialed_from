@@ -11,7 +11,7 @@ group :development, :test do
     gem 'growl'
   end
   
-  gem 'rcov'
+  gem 'rcov', :platforms => :mri
   
   gem 'bundler'
   gem 'jeweler'
