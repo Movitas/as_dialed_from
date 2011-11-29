@@ -17,6 +17,8 @@ module AsDialedFrom
     end
     
     def as_dialed_from(from_country)
+      from_country = 1 if from_country.nil? or (from_country.is_a? String and from_country.empty?)
+
       from_country = self.class.determine_country_code(from_country) if from_country.size > 3
       
       # Convert numeric country code to region id

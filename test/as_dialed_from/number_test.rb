@@ -92,4 +92,12 @@ class Number < Test::Unit::TestCase
     assert_equal "0016502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(MX_NUMBER1)
   end
 
+  test "as_dialed_from should accept nil as input" do
+    assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(nil)
+  end
+
+  test "as_dialed_from should accept an empty string as input" do
+    assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("")
+  end
+
 end
