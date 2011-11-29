@@ -12,7 +12,7 @@ namespace :update do
   task :download do
     AsDialedFrom::Metadata.download
   end
-  
+
   desc "Parses XML into YAML files"
   task :parse do
     AsDialedFrom::Metadata.parse
