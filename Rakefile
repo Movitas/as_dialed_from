@@ -32,7 +32,7 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-if defined? RUBY_ENGINE and RUBY_ENGINE == "ruby"
+begin
   require 'rcov/rcovtask'
   Rcov::RcovTask.new do |test|
     test.libs << 'test'
@@ -40,6 +40,7 @@ if defined? RUBY_ENGINE and RUBY_ENGINE == "ruby"
     test.verbose = true
     test.rcov_opts << '--exclude "gems/*"'
   end
+rescue LoadError
 end
 
 task :default => :test
