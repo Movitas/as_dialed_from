@@ -8,9 +8,10 @@ group :development, :test do
   
   group :darwin do
     gem 'rb-fsevent'
-    gem 'rcov'
     gem 'growl'
   end
+  
+  gem 'rcov', :platforms => :mri
   
   gem 'bundler'
   gem 'jeweler'
