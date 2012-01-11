@@ -11,7 +11,7 @@ group :development, :test do
     gem 'growl'
   end
   
-  gem 'rcov', :platforms => :mri
+  gem 'simplecov' if RUBY_VERSION =~ /1.9/
   
   gem 'bundler'
   gem 'jeweler'
