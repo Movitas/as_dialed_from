@@ -1,6 +1,6 @@
 # encoding: UTF-8
 
-require File.expand_path(File.dirname(__FILE__) + "/../test_helper")
+require 'test_helper'
 
 class NumberTest < Test::Unit::TestCase
 
@@ -29,29 +29,29 @@ class NumberTest < Test::Unit::TestCase
   US_SHORT_BY_ONE_NUMBER = "+1650253000"
   US_TOLLFREE = "+18002530000"
 
-  test "should require an argument" do
+  should "should require an argument" do
     assert_raise(ArgumentError) { AsDialedFrom::Number.new }
   end
 
-  test "should instantiate with a valid phone number" do
+  should "should instantiate with a valid phone number" do
     assert AsDialedFrom::Number.new US_NUMBER
   end
 
-  test "should determine country code from string" do
+  should "should determine country code from string" do
     assert_equal "1",  AsDialedFrom::Number.new(US_NUMBER ).country_code
     assert_equal "52", AsDialedFrom::Number.new(MX_NUMBER1).country_code
     assert_equal "39", AsDialedFrom::Number.new(IT_NUMBER ).country_code
   end
 
-  test "should raise an error if no valid country code was found" do
+  should "should raise an error if no valid country code was found" do
     assert_raise(RuntimeError) { AsDialedFrom::Number.new "+9991234567890" }
   end
 
-  test "should return national number" do
+  should "should return national number" do
     assert_equal "6502530000", AsDialedFrom::Number.new(US_NUMBER).send(:national_number)
   end
 
-  test "should return a number to dial using as_dialed_from" do
+  should "should return a number to dial using as_dialed_from" do
     # Intra-country calls
     assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("US")
     assert_equal "013312345678", AsDialedFrom::Number.new(MX_NUMBER1).as_dialed_from("MX")
@@ -79,24 +79,24 @@ class NumberTest < Test::Unit::TestCase
     assert_equal "0115491187654321", AsDialedFrom::Number.new(AR_MOBILE).as_dialed_from("US")
   end
 
-  test "as_dialed_from should accept a country code string as input" do
+  should "as_dialed_from should accept a country code string as input" do
     assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("1")
   end
 
-  test "as_dialed_from should accept a country code integer as input" do
+  should "as_dialed_from should accept a country code integer as input" do
     assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(1)
   end
 
-  test "as_dialed_from should accept a caller id number as input" do
+  should "as_dialed_from should accept a caller id number as input" do
     assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(US_NUMBER)
     assert_equal "0016502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(MX_NUMBER1)
   end
 
-  test "as_dialed_from should accept nil as input" do
+  should "as_dialed_from should accept nil as input" do
     assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from(nil)
   end
 
-  test "as_dialed_from should accept an empty string as input" do
+  should "as_dialed_from should accept an empty string as input" do
     assert_equal "16502530000", AsDialedFrom::Number.new(US_NUMBER).as_dialed_from("")
   end
 
