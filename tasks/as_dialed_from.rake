@@ -1,5 +1,4 @@
-require 'rake'
-require File.dirname(__FILE__) + '/../lib/as_dialed_from.rb'
+require 'as_dialed_from'
 
 desc "Downloads and parses country metadata from Google's libphonenumber project"
 task :update do
