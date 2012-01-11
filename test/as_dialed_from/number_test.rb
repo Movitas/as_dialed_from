@@ -2,7 +2,7 @@
 
 require File.expand_path(File.dirname(__FILE__) + "/../test_helper")
 
-class Number < Test::Unit::TestCase
+class NumberTest < Test::Unit::TestCase
 
   ALPHA_NUMERIC_NUMBER = "+180074935247"
   AR_MOBILE = "+5491187654321"
